@@ -28,17 +28,17 @@ public class GestorFormacion2 {
         List<Ciclo> ciclos = getCiclos(pathCiclo, familiaProfesional, grado);
 
         System.out.println("Familia profesional: " + familiaProfesional.getNombre() + "\n");
-        escribirEnArchivoBinario(pathListaSerializada, "Familia profesional: " + familiaProfesional.getNombre() + "\n");
+        escribirEnArchivoBinario(pathListaSerializada, "Familia profesional: " + familiaProfesional.getNombre() + "\n\n");
         System.out.println("Grado seleccionado: " +  grado.getNombre() + "\n");
-        escribirEnArchivoBinario(pathListaSerializada, "Grado seleccionado: " +  grado.getNombre() + "\n");
+        escribirEnArchivoBinario(pathListaSerializada, "Grado seleccionado: " +  grado.getNombre() + "\n\n");
         System.out.println("Ciclos encontrados:\n");
-        escribirEnArchivoBinario(pathListaSerializada, "Ciclos encontrados:\n");
+        escribirEnArchivoBinario(pathListaSerializada, "Ciclos encontrados:\n\n");
 
         for(Ciclo ciclo: ciclos) {
             System.out.println("El ciclo " + ciclo.getDescripcion() + " en la familia de " +
-                    familiaProfesional.getNombre() + " es un " + grado.getNombre() + ".");
+                    familiaProfesional.getNombre() + " es un " + grado.getNombre() + ".\n");
             escribirEnArchivoBinario(pathListaSerializada, "El ciclo " + ciclo.getDescripcion() + " en la familia de " +
-                    familiaProfesional.getNombre() + " es un " + grado.getNombre() + ".");
+                    familiaProfesional.getNombre() + " es un " + grado.getNombre() + ".\n\n");
         }
 
     }
@@ -120,7 +120,7 @@ public class GestorFormacion2 {
                 System.out.println("Error al crear el archivo");
             }
         }
-        try(FileOutputStream fos = new FileOutputStream(path);
+        try(FileOutputStream fos = new FileOutputStream(path, true);
             BufferedOutputStream bos = new BufferedOutputStream(fos)) {
             byte[] bytes = texto.getBytes(StandardCharsets.UTF_8);
             bos.write(bytes);
