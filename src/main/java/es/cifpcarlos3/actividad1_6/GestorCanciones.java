@@ -1,7 +1,9 @@
 package es.cifpcarlos3.actividad1_6;
 
 import es.cifpcarlos3.actividad1_6.vo.Cancion;
-import tools.jackson.databind.ObjectMapper;
+
+import tools.jackson.databind.SerializationFeature;
+import tools.jackson.databind.json.JsonMapper;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -84,10 +86,12 @@ public class GestorCanciones {
     }
 
     public static void writeCancionesInJSON (Path path, List<Cancion> canciones) {
-        var objectMapper = new ObjectMapper();
-        
+        var mapper = JsonMapper.builder()
+                .enable(SerializationFeature.INDENT_OUTPUT)
+                .enable(SerializationFeature.WRAP_ROOT_VALUE)
+                .build();
 
-        objectMapper.writeValue(path, canciones);
+        mapper.writeValue(path, canciones);
 
         System.out.println("JSON generado en:");
         System.out.println(path.toString());

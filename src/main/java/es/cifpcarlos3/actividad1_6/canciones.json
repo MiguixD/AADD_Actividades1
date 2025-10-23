@@ -1,1 +1,33 @@
-[{"anio":2002,"autor":"Muse","duracion":"2:40","esEspanol":false,"titulo":"Plug n baby"},{"anio":2013,"autor":"Arctic Monkeys","duracion":"3:10","esEspanol":false,"titulo":"R u mine"},{"anio":2014,"autor":"Fuzz","duracion":"4:30","esEspanol":false,"titulo":"Loose Sutures"},{"anio":2018,"autor":"Parquet Courts","duracion":"3:00","esEspanol":false,"titulo":"Total Football"},{"anio":1973,"autor":"Paco de Lucia","duracion":"6:00","esEspanol":true,"titulo":"Entre dos aguas"}]
+{
+  "ArrayList" : [ {
+    "anio" : 2002,
+    "autor" : "Muse",
+    "duracion" : "2:40",
+    "esEspanol" : false,
+    "titulo" : "Plug n baby"
+  }, {
+    "anio" : 2013,
+    "autor" : "Arctic Monkeys",
+    "duracion" : "3:10",
+    "esEspanol" : false,
+    "titulo" : "R u mine"
+  }, {
+    "anio" : 2014,
+    "autor" : "Fuzz",
+    "duracion" : "4:30",
+    "esEspanol" : false,
+    "titulo" : "Loose Sutures"
+  }, {
+    "anio" : 2018,
+    "autor" : "Parquet Courts",
+    "duracion" : "3:00",
+    "esEspanol" : false,
+    "titulo" : "Total Football"
+  }, {
+    "anio" : 1973,
+    "autor" : "Paco de Lucia",
+    "duracion" : "6:00",
+    "esEspanol" : true,
+    "titulo" : "Entre dos aguas"
+  } ]
+}
