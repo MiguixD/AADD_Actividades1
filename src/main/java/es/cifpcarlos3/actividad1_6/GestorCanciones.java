@@ -2,6 +2,7 @@ package es.cifpcarlos3.actividad1_6;
 
 import es.cifpcarlos3.actividad1_6.vo.Cancion;
 
+import tools.jackson.core.JacksonException;
 import tools.jackson.databind.SerializationFeature;
 import tools.jackson.databind.json.JsonMapper;
 
@@ -86,14 +87,18 @@ public class GestorCanciones {
     }
 
     public static void writeCancionesInJSON (Path path, List<Cancion> canciones) {
-        var mapper = JsonMapper.builder()
-                .enable(SerializationFeature.INDENT_OUTPUT)
-                .enable(SerializationFeature.WRAP_ROOT_VALUE)
-                .build();
+        try {
+            var mapper = JsonMapper.builder()
+                    .enable(SerializationFeature.INDENT_OUTPUT)
+                    .enable(SerializationFeature.WRAP_ROOT_VALUE)
+                    .build();
 
-        mapper.writeValue(path, canciones);
+            mapper.writeValue(path, canciones);
 
-        System.out.println("JSON generado en:");
-        System.out.println(path.toString());
+            System.out.println("JSON generado en:");
+            System.out.println(path.toString());
+        } catch (JacksonException e) {
+            System.out.println("Error al generar JSON");
+        }
     }
 }
