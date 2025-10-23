@@ -1,0 +1,31 @@
+{
+  "recetas": [
+    {
+      "nombre": "Gazpacho base",
+      "tipo": "Sopa fría",
+      "origen": {
+        "pais": "España",
+        "region": "Andalucía"
+      },
+      "ingredientes": [
+        { "nombre": "Tomate",         "cantidad": "1 kg"  },
+        { "nombre": "Pimiento verde", "cantidad": "100 g" }
+      ]
+    },
+    {
+      "nombre": "Ensalada murciana",
+      "tipo": "Ensalada",
+      "origen": {
+        "pais": "España",
+        "region": "Murcia"
+      },
+      "ingredientes": [
+        { "nombre": "Tomate en conserva (troceado)", "cantidad": "400 g" },
+        { "nombre": "Cebolla",                        "cantidad": "1 pequeña" },
+        { "nombre": "Atún en conserva",              "cantidad": "1 lata (80 g)" },
+        { "nombre": "Aceitunas negras",              "cantidad": "50 g" },
+        { "nombre": "Huevo cocido",                  "cantidad": "1" }
+      ]
+    }
+  ]
+}
